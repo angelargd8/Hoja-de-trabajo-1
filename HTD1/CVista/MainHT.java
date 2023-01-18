@@ -1,4 +1,4 @@
-package Vista;
+package CVista;
 
 public class MainHT {
     /** 

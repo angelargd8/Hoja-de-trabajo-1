@@ -1,4 +1,4 @@
-package Controlador;
+package CControlador;
 
 public class Controlador {
     

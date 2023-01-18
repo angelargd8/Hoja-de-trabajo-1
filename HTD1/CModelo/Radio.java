@@ -1,4 +1,4 @@
-package Modelo;
+package CModelo;
 
 public class Radio {
     

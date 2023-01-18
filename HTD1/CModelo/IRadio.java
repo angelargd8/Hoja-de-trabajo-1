@@ -1,4 +1,4 @@
-package modelo;
+package CModelo;
 
 public interface IRadio {
     public boolean power();
