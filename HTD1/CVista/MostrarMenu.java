@@ -29,6 +29,9 @@ public class MostrarMenu {
 /////////////n2. Cambiar de AM a FM//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             try{
                 if (opcion==2){
+                    System.out.println("Cambiando de frecuencia... ");
+                    controlador.frecuencia();
+                    System.out.println("La frecuencia se ha cambiado correctamente a " + controlador.sFrecuencia()); 
                 }
     ///////////3. Avanzar en el dial de las emisoras ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 else if (opcion==3){
