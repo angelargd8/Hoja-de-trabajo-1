@@ -8,7 +8,7 @@ import CVista.Vista;
 public class Controlador implements IRadio  {
     Vista  vista;
 
-    Radio radio = new Radio(null, false, 0, "AM", 0.00,0 );
+    Radio radio = new Radio(null, false, false, 0, "AM", 0.00,0 );
 
     public Controlador(){
 
@@ -24,8 +24,18 @@ public class Controlador implements IRadio  {
 
     @Override
     public boolean frecuencia() {
-        // TODO Auto-generated method stub
-        return false;
+        Boolean frecuencia = radio.setFrecuencia();
+        return frecuencia;
+    }
+
+    public String sFrecuencia(){
+        String sFrecuencia = "FM";
+        if (radio.getFrecuencia() == false){
+            sFrecuencia = "AM";
+        }else if(radio.getFrecuencia() == true){
+            sFrecuencia = "FM";
+        }
+        return sFrecuencia;
     }
 
     @Override
