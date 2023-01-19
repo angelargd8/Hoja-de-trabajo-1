@@ -6,6 +6,7 @@ public class Radio {
     
     String d;
     boolean estado;
+    boolean frecuencia;
     int volumen;
     String ModulacionDeOnda;
     double emisoras;
@@ -15,9 +16,10 @@ public class Radio {
 
     //Scanner in = new Scanner(System.in);
 
-    public Radio(String d, Boolean estado, int volumen, String modulacionDeOnda, double emisoras, int noLista) {
+    public Radio(String d, Boolean estado, Boolean frecuencia, int volumen, String modulacionDeOnda, double emisoras, int noLista) {
         this.d = d;
         this.estado = estado;
+        this.frecuencia = frecuencia;
         this.volumen = volumen;
         ModulacionDeOnda = modulacionDeOnda;
         this.emisoras = emisoras;
@@ -44,6 +46,22 @@ public class Radio {
             estado= false;
         }
         return estado;
+    }
+    
+    
+    public boolean getFrecuencia() {
+        return frecuencia;
+    }
+
+
+    public Boolean setFrecuencia() {
+        if (frecuencia==false){
+            frecuencia= true;
+        }else if (frecuencia== true){
+    
+            frecuencia= false;
+        }
+        return frecuencia;
     }
 
     public int getVolumen() {
