@@ -1,3 +1,5 @@
+package CModelo;
+
 public interface IRadio{
 
     //Tiene que iniciar apagada y funciona para cambiar la radio de encendida a apagada

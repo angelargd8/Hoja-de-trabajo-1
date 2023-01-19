@@ -23,7 +23,8 @@ public class MostrarMenu {
 /////////////1. Encender el radio//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (opcion==1){
                 System.out.println("\nEncendiendo el radio... "  );
-                //controlador.Estado();
+                controlador.power();
+                System.out.println("\nEl radio esta encendido "  );
             }
 /////////////n2. Cambiar de AM a FM//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             try{
@@ -49,7 +50,7 @@ public class MostrarMenu {
     /////////////apagar el radio//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 else if (opcion==6){
                     System.out.println("\nApagando el radio... "  );
-                    //controlador.Estado();
+                    controlador.power();
                     System.out.println("\nRadio apagado "  );
 
                 }

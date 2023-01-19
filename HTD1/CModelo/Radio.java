@@ -2,19 +2,27 @@ package CModelo;
 
 import java.util.*;
 
-public class Radio implements IRadio {
+public class Radio {
     
-    private String d;
-    private boolean estado;
-    private int volumen;
-    private String ModulacionDeOnda;
-    private double emisoras;
-    private int NoLista;
-    private int IcancionActual;
-    private boolean estadoTelefono;
-    private String Audio;
+    String d;
+    boolean estado;
+    int volumen;
+    String ModulacionDeOnda;
+    double emisoras;
+    int NoLista;
 
-    Scanner in = new Scanner(System.in);
+
+
+    //Scanner in = new Scanner(System.in);
+
+    public Radio(String d, Boolean estado, int volumen, String modulacionDeOnda, double emisoras, int noLista) {
+        this.d = d;
+        this.estado = estado;
+        this.volumen = volumen;
+        ModulacionDeOnda = modulacionDeOnda;
+        this.emisoras = emisoras;
+        NoLista = noLista;
+    }
 
     public String getD() {
         return d;
@@ -28,8 +36,14 @@ public class Radio implements IRadio {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
+    public Boolean setEstado() {
+        if (estado==false){
+            estado= true;
+        }else if (estado== true){
+    
+            estado= false;
+        }
+        return estado;
     }
 
     public int getVolumen() {
@@ -64,34 +78,11 @@ public class Radio implements IRadio {
         this.NoLista = NoLista;
     }
 
-    public int getIcancionActual() {
-        return IcancionActual;
-    }
 
-    public void setIcancionActual(int IcancionActual) {
-        this.IcancionActual = IcancionActual;
-    }
-
-    public boolean isEstadoTelefono() {
-        return estadoTelefono;
-    }
-
-    public void setEstadoTelefono(boolean estadoTelefono) {
-        this.estadoTelefono = estadoTelefono;
-    }
-
-    public String getAudio() {
-        return Audio;
-    }
-
-    public void setAudio(String Audio) {
-        this.Audio = Audio;
-    }
-
-    public Radio (){
+  public Radio (){
         
     }
-
+  /*
     public boolean power(){
         if(estado == true){
             estado = false;
@@ -103,7 +94,7 @@ public class Radio implements IRadio {
         return estado;
     }
 
-    public String cambiarEstacion(){
+    public void cambiarEstacion(){
         
         if(ModulacionDeOnda.equals("AM")){
             System.out.println("Ingrese 1 para subir de estación o 0 para bajar de estación");
@@ -142,5 +133,7 @@ public class Radio implements IRadio {
 
         }
         
-    }   
+    }*/
+
+     
 }
