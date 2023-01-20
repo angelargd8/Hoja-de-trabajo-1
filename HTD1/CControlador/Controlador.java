@@ -127,7 +127,7 @@ public class Controlador implements IRadio  {
     @Override
     public double emisoraActual() {
         // TODO Auto-generated method stub
-        return 0;
+         return radio.getEmisoras();
     }
 
     @Override
