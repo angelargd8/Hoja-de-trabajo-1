@@ -24,7 +24,7 @@ public class Controlador implements IRadio  {
      */
     Vista  vista;
 
-    Radio radio = new Radio(null, false, false, 0, "AM", 530,0 );
+    Radio radio = new Radio(null, false, true, 0, "AM", 530,0 );
     //Array
     ArrayList<Double> ListaDeEmisorasGuardadas = new ArrayList<>();
 
@@ -54,8 +54,9 @@ public class Controlador implements IRadio  {
      */
     @Override
     public boolean frecuencia() {
-        Boolean frecuencia = radio.setFrecuencia();
-        return frecuencia;
+        return false;
+        //Boolean frecuencia = radio.setFrecuencia(frecuencia);
+        //return frecuencia;
     }
 
     /**
@@ -67,14 +68,18 @@ public class Controlador implements IRadio  {
         String sFrecuencia = "FM";
         if (radio.getFrecuencia() == false){
             sFrecuencia = "AM";
-            radio.setFrecuencia();
+            radio.setFrecuencia(true);
             radio.setEmisoras(530);
+            
         }else if(radio.getFrecuencia() == true){
             sFrecuencia = "FM";
             radio.setEmisoras(87.9);
+            radio.setFrecuencia(false);
+            
         }
         return sFrecuencia;
     }
+
 
   
     /**

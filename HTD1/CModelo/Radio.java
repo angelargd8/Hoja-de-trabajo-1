@@ -91,21 +91,15 @@ public class Radio {
     public boolean getFrecuencia() {
         return frecuencia;
     }
+    public void setFrecuencia(boolean frecuencia) {
+        this.frecuencia = frecuencia;
+    }
 
 /**
  * 
  * @return
  */
-    public Boolean setFrecuencia() {
-        //false = FM
-        if (frecuencia==false){
-            frecuencia= true;
-        }else if (frecuencia== true){
-    
-            frecuencia= false;
-        }
-        return frecuencia;
-    }
+ 
 /**
  * 
  * @return
