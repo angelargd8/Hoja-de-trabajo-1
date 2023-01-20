@@ -8,7 +8,10 @@ import CVista.Vista;
 public class Controlador implements IRadio  {
     Vista  vista;
 
-    Radio radio = new Radio(null, false, false, 0, "AM", 0.00,0 );
+    Radio radio = new Radio(null, false, false, 0, "AM", 530,0 );
+    //Array
+    ArrayList<Double> ListaDeEmisorasGuardadas = new ArrayList<>();
+
 
     public Controlador(){
 
@@ -130,6 +133,17 @@ public class Controlador implements IRadio  {
          return radio.getEmisoras();
     }
 
+    public void GuardarEm(){
+        Double EmisoraActual = radio.getEmisoras();
+        if (ListaDeEmisorasGuardadas.size()<12){
+            ListaDeEmisorasGuardadas.add(EmisoraActual);
+        }
+        else{
+            vista.validacion();
+        }
+
+    }
+
     @Override
     public void guardarEmisora(double emisora) {
         // TODO Auto-generated method stub
@@ -139,6 +153,9 @@ public class Controlador implements IRadio  {
     @Override
     public void cargarEmisoraGuardada(int posicion) {
         // TODO Auto-generated method stub
+
+        
+
         
     }
 
