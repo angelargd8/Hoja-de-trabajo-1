@@ -1,3 +1,14 @@
+/**
+ * Autores:
+ *  Angela García #22869
+ *  Carlos Valladares #221164
+ *  Santiago Pereira #22318
+ */
+
+/**
+ * Se importan las librerias a usar
+ */
+
 package CControlador;
 import java.util.ArrayList;
 
@@ -6,6 +17,10 @@ import CModelo.Radio;
 import CVista.Vista;
 
 public class Controlador implements IRadio  {
+    
+    /**
+     * Se crean los atributos y objetos.
+     */
     Vista  vista;
 
     Radio radio = new Radio(null, false, false, 0, "AM", 530,0 );
@@ -13,10 +28,17 @@ public class Controlador implements IRadio  {
     ArrayList<Double> ListaDeEmisorasGuardadas = new ArrayList<>();
 
 
+    /**
+     * Constructor
+     */
     public Controlador(){
 
     }
 
+    /**
+     * 
+     * @return
+     */
     @Override
     public boolean power() {
         Boolean estado= radio.setEstado();
@@ -25,12 +47,20 @@ public class Controlador implements IRadio  {
 
     }
 
+    /**
+     * 
+     * @return
+     */
     @Override
     public boolean frecuencia() {
         Boolean frecuencia = radio.setFrecuencia();
         return frecuencia;
     }
 
+    /**
+     * 
+     * @return
+     */
     public String sFrecuencia(){
         //false = FM
         String sFrecuencia = "FM";
@@ -45,10 +75,19 @@ public class Controlador implements IRadio  {
         return sFrecuencia;
     }
 
+  
+    /**
+     * 
+     * @return
+     */
     public double getEm(){
         return radio.getEmisoras();
     }
 
+    /**
+     * 
+     * @param subirBajar
+     */
     @Override
     public void cambiarEmisora(boolean subirBajar) {
         // TODO Auto-generated method stub
@@ -90,6 +129,10 @@ public class Controlador implements IRadio  {
         }*/
     }
 
+    /**
+     * 
+     * @param des
+     */
     public void EmisoraCambio(int des){
         boolean ModulacionDeOnda = radio.getFrecuencia();
         double emisoras = radio.getEmisoras();
@@ -127,12 +170,19 @@ public class Controlador implements IRadio  {
 
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public double emisoraActual() {
         // TODO Auto-generated method stub
          return radio.getEmisoras();
     }
 
+    /**
+     * Guardar la emisora preferida
+     */
     public void GuardarEm(){
         Double EmisoraActual = radio.getEmisoras();
         if (ListaDeEmisorasGuardadas.size()<12){
@@ -144,12 +194,20 @@ public class Controlador implements IRadio  {
 
     }
 
+    /**
+     * 
+     * @param emisora
+     */
     @Override
     public void guardarEmisora(double emisora) {
         // TODO Auto-generated method stub
         
     }
 
+    /**
+     * 
+     * @param posicion
+     */
     @Override
     public void cargarEmisoraGuardada(int posicion) {
         // TODO Auto-generated method stub
