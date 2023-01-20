@@ -14,6 +14,8 @@ public class MostrarMenu {
     Controlador controlador;
     int opcion=0;
     int opcionEmisora=0;
+    int opcionEmisora2=0;
+
 
     
     public MostrarMenu(){
@@ -53,13 +55,14 @@ public class MostrarMenu {
 
                 else if (opcion==4){
                     controlador.GuardarEm();
+                    System.out.println("Se guardo la emisora");
                     
                 }
     //////////////5. Permite seleccionar la emisora puesta en un boton /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                 else if (opcion==5){
-                    opcionEmisora=  vista.SeleccioneMenu("Ingrese el número de la emisora a cargar ");
-
+                    opcionEmisora2=  vista.SeleccioneMenu("Ingrese el número de la emisora a cargar (de 0 a 11)");
+                    controlador.cargarEmisoraGuardada(opcionEmisora2);
                 
                 }
 

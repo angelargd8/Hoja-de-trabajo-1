@@ -217,6 +217,9 @@ public class Controlador implements IRadio  {
     @Override
     public void cargarEmisoraGuardada(int posicion) {
         // TODO Auto-generated method stub
+        double CargarEmisora = ListaDeEmisorasGuardadas.get(posicion);
+        System.out.println(CargarEmisora);
+        radio.setEmisoras(CargarEmisora);
 
         
 
