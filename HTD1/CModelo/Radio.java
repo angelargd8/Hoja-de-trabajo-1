@@ -1,9 +1,23 @@
+/**
+ * Autores:
+ *  Angela García #22869
+ *  Carlos Valladares #221164
+ *  Santiago Pereira #22318
+ */
+
+
+/**
+ * Se importan las librerias a usar
+ */
 package CModelo;
 
 import java.util.*;
 
 public class Radio {
     
+    /**
+     * Atributos
+     */
     String d;
     boolean estado;
     boolean frecuencia;
@@ -16,6 +30,16 @@ public class Radio {
 
     //Scanner in = new Scanner(System.in);
 
+    /**
+     * 
+     * @param d
+     * @param estado
+     * @param frecuencia
+     * @param volumen
+     * @param modulacionDeOnda
+     * @param emisoras
+     * @param noLista
+     */
     public Radio(String d, Boolean estado, Boolean frecuencia, int volumen, String modulacionDeOnda, double emisoras, int noLista) {
         this.d = d;
         this.estado = estado;
@@ -25,19 +49,31 @@ public class Radio {
         this.emisoras = emisoras;
         NoLista = noLista;
     }
-
+    /**
+     * 
+     * @return
+     */
     public String getD() {
         return d;
     }
-
+    /**
+     * 
+     * @param d
+     */
     public void setD(String d) {
         this.d = d;
     }
-
+    /**
+     * 
+     * @return
+     */
     public boolean getestado() {
         return estado;
     }
-
+/**
+ * 
+ * @return
+ */
     public Boolean setEstado() {
         if (estado==false){
             estado= true;
@@ -48,12 +84,18 @@ public class Radio {
         return estado;
     }
     
-    
+    /**
+     * 
+     * @return
+     */
     public boolean getFrecuencia() {
         return frecuencia;
     }
 
-
+/**
+ * 
+ * @return
+ */
     public Boolean setFrecuencia() {
         //false = FM
         if (frecuencia==false){
@@ -64,7 +106,10 @@ public class Radio {
         }
         return frecuencia;
     }
-
+/**
+ * 
+ * @return
+ */
     public int getVolumen() {
         return volumen;
     }
@@ -72,32 +117,52 @@ public class Radio {
     public void setVolumen(int volumen) {
         this.volumen = volumen;
     }
-
+/**
+ * 
+ * @return
+ */
     public String getModulacionDeOnda() {
         return ModulacionDeOnda;
     }
-
+/**
+ * 
+ * @param ModulacionDeOnda
+ */
     public void setModulacionDeOnda(String ModulacionDeOnda) {
         this.ModulacionDeOnda = ModulacionDeOnda;
     }
-
+/**
+ * 
+ * @return
+ */
     public double getEmisoras() {
         return emisoras;
     }
-
+/**
+ * 
+ * @param emisoras
+ */
     public void setEmisoras(double emisoras) {
         this.emisoras = emisoras;
     }
-
+/**
+ * 
+ * @return
+ */
     public int getNoLista() {
         return NoLista;
     }
-
+/**
+ * 
+ * @param NoLista
+ */
     public void setNoLista(int NoLista) {
         this.NoLista = NoLista;
     }
 
-
+/**
+ * Constructor 
+ */
   public Radio (){
         
     }
