@@ -29,6 +29,6 @@ public class ControladorTest {
     @Test
     public void testEmisoraCambio(){
         escenario();
-        //assertArrayEquals(controlador.EmisoraCambio(0) == 530);
+        assertTrue(controlador.getEm() == 0.00);
     }
 }

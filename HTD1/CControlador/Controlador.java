@@ -42,6 +42,10 @@ public class Controlador implements IRadio  {
         return sFrecuencia;
     }
 
+    public double getEm(){
+        return radio.getEmisoras();
+    }
+
     @Override
     public void cambiarEmisora(boolean subirBajar) {
         // TODO Auto-generated method stub
