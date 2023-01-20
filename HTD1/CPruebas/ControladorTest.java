@@ -23,12 +23,12 @@ public class ControladorTest {
     @Test
     public void testFrecuencia(){
         escenario();
-        assertTrue(controlador.sFrecuencia() == "AM");
+        assertTrue(controlador.sFrecuencia() == "FM");
     }
 
     @Test
     public void testEmisoraCambio(){
         escenario();
-        assertTrue(controlador.getEm() == 0.00);
+        assertTrue(controlador.getEm() == 530);
     }
 }
