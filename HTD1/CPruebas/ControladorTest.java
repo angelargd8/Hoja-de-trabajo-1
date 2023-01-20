@@ -1,5 +1,7 @@
 package CPruebas;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
 import CControlador.*;
@@ -22,5 +24,11 @@ public class ControladorTest {
     public void testFrecuencia(){
         escenario();
         assertTrue(controlador.sFrecuencia() == "AM");
+    }
+
+    @Test
+    public void testEmisoraCambio(){
+        escenario();
+        //assertArrayEquals(controlador.EmisoraCambio(0) == 530);
     }
 }
