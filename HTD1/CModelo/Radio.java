@@ -55,6 +55,7 @@ public class Radio {
 
 
     public Boolean setFrecuencia() {
+        //false = FM
         if (frecuencia==false){
             frecuencia= true;
         }else if (frecuencia== true){
