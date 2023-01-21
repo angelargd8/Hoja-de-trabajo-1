@@ -65,8 +65,9 @@ public class Controlador implements IRadio  {
      */
     public String sFrecuencia(){
         //false = FM
+        String sFrecuencia = "FM";
         if (radio.getestado()==true){
-            String sFrecuencia = "FM";
+            
             if (radio.getFrecuencia() == false){
                 sFrecuencia = "AM";
                 radio.setFrecuencia(true);
@@ -79,11 +80,11 @@ public class Controlador implements IRadio  {
                 
             }
             System.out.println("La frecuencia se ha cambiado correctamente a "); 
-            return sFrecuencia;
         }else{
             vista.validacion();
-            return null;
+            
         }
+        return sFrecuencia;
         
 
         

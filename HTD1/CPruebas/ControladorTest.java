@@ -27,7 +27,7 @@ public class ControladorTest {
     @Test
     public void testFrecuencia(){
         escenario();
-        assertTrue(controlador.sFrecuencia() == "FM");
+        assertTrue(controlador.frecuencia() == false);
     }
 
     @Test
