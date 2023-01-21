@@ -1,3 +1,9 @@
+/**
+ * Autores:
+ *  Angela García #22869
+ *  Carlos Valladares #221164
+ *  Santiago Pereira #22318
+ */
 package CVista;
 import java.util.Scanner;
 
@@ -45,7 +51,10 @@ public class Vista {
     }
 
     public void validacion2(){
-        System.out.println("\n- Primero debe de encender su radio-");
+        System.out.println("\n- Opción no válida-");
+    }
+    public void validacion3(){
+        System.out.println("\n- Opción no válida, debe de asegurarse de estar en la Frecuencia correcta o tener guardado una emisora-");
     }
 }
     

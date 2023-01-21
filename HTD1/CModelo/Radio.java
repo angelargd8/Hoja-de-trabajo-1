@@ -11,7 +11,6 @@
  */
 package CModelo;
 
-import java.util.*;
 
 public class Radio {
     
@@ -32,37 +31,18 @@ public class Radio {
 
     /**
      * 
-     * @param d
      * @param estado
      * @param frecuencia
-     * @param volumen
      * @param modulacionDeOnda
      * @param emisoras
-     * @param noLista
      */
-    public Radio(String d, Boolean estado, Boolean frecuencia, int volumen, String modulacionDeOnda, double emisoras, int noLista) {
-        this.d = d;
+    public Radio( Boolean estado, Boolean frecuencia, String modulacionDeOnda, double emisoras) {
         this.estado = estado;
         this.frecuencia = frecuencia;
-        this.volumen = volumen;
         ModulacionDeOnda = modulacionDeOnda;
         this.emisoras = emisoras;
-        NoLista = noLista;
     }
-    /**
-     * 
-     * @return
-     */
-    public String getD() {
-        return d;
-    }
-    /**
-     * 
-     * @param d
-     */
-    public void setD(String d) {
-        this.d = d;
-    }
+    
     /**
      * 
      * @return
@@ -95,22 +75,6 @@ public class Radio {
         this.frecuencia = frecuencia;
     }
 
-/**
- * 
- * @return
- */
- 
-/**
- * 
- * @return
- */
-    public int getVolumen() {
-        return volumen;
-    }
-
-    public void setVolumen(int volumen) {
-        this.volumen = volumen;
-    }
 /**
  * 
  * @return

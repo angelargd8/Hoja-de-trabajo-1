@@ -24,7 +24,7 @@ public class Controlador implements IRadio  {
      */
     Vista  vista;
 
-    Radio radio = new Radio(null, false, true, 0, "AM", 530,0 );
+    Radio radio = new Radio(false, true, "AM", 530 );
     //Array
     ArrayList<Double> ListaDeEmisorasGuardadas = new ArrayList<>();
 
@@ -65,19 +65,28 @@ public class Controlador implements IRadio  {
      */
     public String sFrecuencia(){
         //false = FM
-        String sFrecuencia = "FM";
-        if (radio.getFrecuencia() == false){
-            sFrecuencia = "AM";
-            radio.setFrecuencia(true);
-            radio.setEmisoras(530);
-            
-        }else if(radio.getFrecuencia() == true){
-            sFrecuencia = "FM";
-            radio.setEmisoras(87.9);
-            radio.setFrecuencia(false);
-            
+        if (radio.getestado()==true){
+            String sFrecuencia = "FM";
+            if (radio.getFrecuencia() == false){
+                sFrecuencia = "AM";
+                radio.setFrecuencia(true);
+                radio.setEmisoras(530);
+                
+            }else if(radio.getFrecuencia() == true){
+                sFrecuencia = "FM";
+                radio.setEmisoras(87.9);
+                radio.setFrecuencia(false);
+                
+            }
+            System.out.println("La frecuencia se ha cambiado correctamente a "); 
+            return sFrecuencia;
+        }else{
+            vista.validacion();
+            return null;
         }
-        return sFrecuencia;
+        
+
+        
     }
 
 
@@ -172,6 +181,7 @@ public class Controlador implements IRadio  {
             }
 
         }
+        System.out.println("Se cambio la emisora ");
 
 
     }
@@ -193,6 +203,7 @@ public class Controlador implements IRadio  {
         Double EmisoraActual = radio.getEmisoras();
         if (ListaDeEmisorasGuardadas.size()<12){
             ListaDeEmisorasGuardadas.add(EmisoraActual);
+            System.out.println("Se guardo la emisora");
         }
         else{
             vista.validacion();
@@ -216,12 +227,16 @@ public class Controlador implements IRadio  {
      */
     @Override
     public void cargarEmisoraGuardada(int posicion) {
-        // TODO Auto-generated method stub
+        // TODO Auto-generated method stub  
+    try {
         double CargarEmisora = ListaDeEmisorasGuardadas.get(posicion);
         System.out.println(CargarEmisora);
         radio.setEmisoras(CargarEmisora);
-
         
+    } catch (Exception e) {
+        // TODO: handle exception
+        vista.validacion3();
+    }
 
         
     }

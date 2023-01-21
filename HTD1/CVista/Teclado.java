@@ -1,4 +1,9 @@
-
+/**
+ * Autores:
+ *  Angela García #22869
+ *  Carlos Valladares #221164
+ *  Santiago Pereira #22318
+ */
 //Para validar los espacios de los nombres o apellidos 
 package CVista;
 //Modulos:

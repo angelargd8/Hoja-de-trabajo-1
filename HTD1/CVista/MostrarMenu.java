@@ -40,14 +40,15 @@ public class MostrarMenu {
             try{
                 if (opcion==2){
                     System.out.println("Cambiando de frecuencia... ");
-                    controlador.frecuencia();
-                    System.out.println("La frecuencia se ha cambiado correctamente a " + controlador.sFrecuencia()); 
+                    controlador.sFrecuencia();
+                    //System.out.println("La frecuencia se ha cambiado correctamente a " + controlador.sFrecuencia()); 
+
                 }
     ///////////3. Avanzar en el dial de las emisoras ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 else if (opcion==3){
                     opcionEmisora=  vista.SeleccioneMenu("0) para bajar de estación\n1) para subir de estación ");
                     controlador.EmisoraCambio(opcionEmisora);
-                    System.out.println("Se cambio la emisora ");
+                    
 
 
                 }
@@ -55,7 +56,7 @@ public class MostrarMenu {
 
                 else if (opcion==4){
                     controlador.GuardarEm();
-                    System.out.println("Se guardo la emisora");
+                    
                     
                 }
     //////////////5. Permite seleccionar la emisora puesta en un boton /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

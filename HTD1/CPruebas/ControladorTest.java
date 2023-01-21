@@ -1,7 +1,11 @@
+/**
+ * Autores:
+ *  Angela García #22869
+ *  Carlos Valladares #221164
+ *  Santiago Pereira #22318
+ */
 package CPruebas;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
 import CControlador.*;
